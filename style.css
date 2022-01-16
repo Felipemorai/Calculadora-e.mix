@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Opens Sans', sans-serif;
 }
 
 body {
     background-color: #EFEFEF;
-    min-width: 100vw;
+}
+
+.wrapper {
+    display: grid;
+    justify-content: center;
+    align-content: center;
     min-height: 100vh;
+}
+
+.calculator-buttons {
+    display: grid;
 }
