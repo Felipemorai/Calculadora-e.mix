@@ -15,8 +15,24 @@ body {
     justify-content: center;
     align-content: center;
     min-height: 100vh;
+    
+}
+
+.title {
+    background: #006A6A;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title img {
+    display: flex;
+    height: 38px;
+    margin-right: 2px;
 }
 
 .calculator-buttons {
     display: grid;
+    grid-template-columns: repeat(4, 100px);
 }
