@@ -19,11 +19,12 @@ body {
 
 .title {
     background: #006A6A;
-    height: 70px;
+    height: 68px;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 2px solid #006A6A;
+    border-radius: 2px;
 }
 
 .title img {
@@ -37,12 +38,16 @@ body {
     grid-template-columns: repeat(4, 77px);
     grid-template-rows: repeat(5, 72px);
     border: 1px solid rgb(7,7,6);
-    border: 2px solid #006A6A;
+    border-left: 3px solid #006A6A;
+    border-right: 3px solid #006A6A;
+    border-bottom: 3px solid #006A6A;
 } 
 
 button {
     border: 0.12rem solid #070706;
     margin: 2px #070706;
+    cursor: pointer;
+    outline: none;
 }
 
 .key7, .key8, .key9, .key4, .key5, .key6,
@@ -78,4 +83,12 @@ button {
     font-family: 'Open Sans';
     font-size: 23px;
     font-weight: 300;
+}
+
+.display {
+    background: #070706;
+    height: 150px;
+    border: 2px solid #006A6A;
+    border-bottom: 2px solid #070706;
+    color: #fff;
 }
