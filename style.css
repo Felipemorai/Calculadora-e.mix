@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Opens Sans', sans-serif;
+    font-family: 'Opens Sans', sans-serif; 
 }
 
 body {
@@ -34,14 +34,14 @@ body {
 
 .calculator-buttons {
     display: grid;
-    grid-template-columns: repeat(4, 75px);
-    grid-template-rows: repeat(5, 70px);
+    grid-template-columns: repeat(4, 77px);
+    grid-template-rows: repeat(5, 72px);
     border: 1px solid rgb(7,7,6);
     border: 2px solid #006A6A;
 } 
 
 button {
-    border: 1px solid #070706;
+    border: 0.12rem solid #070706;
     margin: 2px #070706;
 }
 
@@ -52,4 +52,30 @@ button {
     font-size: 23px;
     font-weight: 700;
     font-family: 'Open Sans';
+}
+
+.invert, .dot {
+    font-weight: 300;
+}
+
+.all-clear, .delete, .square-root, .divide,
+.multiply, .subtract, .addition {
+    background: rgb(38, 38, 38);
+    color: rgb(180, 180, 180);
+    font-size: 23px;
+    font-weight: 300;
+    font-family: 'Montserrat';
+}
+
+.divide, .multiply, .subtract,
+.addition {
+    font-size: 28px;
+}
+
+.equal {
+    background: #DF7F00;
+    color: #E4D2BB;
+    font-family: 'Open Sans';
+    font-size: 23px;
+    font-weight: 300;
 }
