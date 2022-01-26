@@ -19,5 +19,7 @@ numbers.forEach( number => {
         if(e.target.innerText === '.' && dot) {
             return;
         }
+        disPrev += e.target.innerText;
+        displayPrev.innerText = disPrev;
     });
 });
