@@ -87,7 +87,7 @@ button {
 
 .display {
     background: #070706;
-    height: 160px;
+    min-height: 160px;
     border: 2px solid #006A6A;
     border-bottom: 2px solid #070706;
     display: flex;
@@ -96,6 +96,13 @@ button {
     justify-content: space-around;
     padding: 16px;
 }
+
+.display div {
+    max-width: 15ch;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+} 
 
 .display-previous {
     color: rgba(255, 255, 255, 0.85);

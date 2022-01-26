@@ -6,7 +6,7 @@ const equal = document.querySelector('.equal');
 const allclear = document.querySelector('.all-clear');
 const deletelast = document.querySelector('.delete');
 
-let disPrev = null;
+let disPrev = '';
 let disRes = '';
 let lastOperation = '';
 let dot = false;
@@ -29,11 +29,18 @@ operaters.forEach( operater => {
         if(!disRes) disPrev;
         dot = false;
         const operaterName = e.target.innerText;
-        if(disPrev && lastOperation) {
+        if(disRes && lastOperation) {
             mathOperation();
         }
         else{
-            disRes = parseFloat(disPrev);
+            disPrev = parseFloat(disRes);
         }
+        clearOperation(operaterName);
+        console.log(disPrev);
     });
 }); 
+
+function clearOperation(name = '') {
+    disRes += ' ' + name + ' ';
+    displayPrev.innerText = disRes;
+}
