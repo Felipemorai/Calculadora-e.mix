@@ -24,3 +24,16 @@ numbers.forEach( number => {
     });
 });
 
+operaters.forEach( operater => {
+    operater.addEventListener('click', (e) => {
+        if(!disRes) disPrev;
+        dot = false;
+        const operaterName = e.target.innerText;
+        if(disPrev && lastOperation) {
+            mathOperation();
+        }
+        else{
+            disRes = parseFloat(disPrev);
+        }
+    });
+}); 
