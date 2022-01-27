@@ -8,6 +8,7 @@ const deletelast = document.querySelector('.delete');
 
 let disPrev = '';
 let disRes = '';
+let result = '';
 let lastOperation = '';
 let dot = false;
 
@@ -36,6 +37,7 @@ operaters.forEach( operater => {
             disPrev = parseFloat(disRes);
         }
         clearOperation(operaterName);
+        lastOperation = operaterName;
         console.log(disPrev);
     });
 }); 
@@ -43,4 +45,12 @@ operaters.forEach( operater => {
 function clearOperation(name = '') {
     disRes += ' ' + name + ' ';
     displayPrev.innerText = disRes;
+    displayResult.innerText = '';
+    disRes = '';
+}
+
+function mathOperation() {
+    if(lastOperation === '×') {
+        result = parseFloat();
+    }
 }
