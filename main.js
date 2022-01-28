@@ -1,7 +1,7 @@
 const previousDisplayText = document.querySelector('.display-previous');
 const resultDisplayText = document.querySelector('.display-result');
 const numberButtons = document.querySelectorAll('[id*=key]');
-const operaters = document.querySelectorAll('[id*=operater]');
+const operatersButtons = document.querySelectorAll('[id*=operater]');
 const equal = document.querySelector('.equal');
 const allClear = document.querySelector('.all-clear');
 const deleteLast = document.querySelector('.delete');
@@ -13,9 +13,16 @@ class Calculator {
         this.clear();
     }
 
+    chooseOperation(operaters) {
+        this.operaters = operaters;
+
+        this.previousDisplay = `${this.resultDisplay} ${this.operaters}`;
+        this.resultDisplay = '';
+    }
+
     appendNumber(number) {
         if (this.resultDisplay.includes('.') && number === '.') return;
-        
+
         this.resultDisplay = `${this.resultDisplay}${number.toString()}`;
     }
 
@@ -41,6 +48,13 @@ for (const numberButton of numberButtons) {
         calculator.appendNumber(numberButton.innerText);
         calculator.updateDisplay();
     });
+}
+
+for (const operatersButton of operatersButtons) {
+    operatersButton.addEventListener('click', () => {
+        calculator.chooseOperation(operatersButton.innerText);
+        calculator.updateDisplay();
+    })
 }
 
 allClear.addEventListener('click', () => {
