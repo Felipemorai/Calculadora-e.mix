@@ -10,9 +10,12 @@ class Calculator {
     constructor(previousDisplayText, resultDisplayText) {
         this.previousDisplayText = previousDisplayText;
         this.resultDisplayText = resultDisplayText;
+        this.clear();
     }
 
     appendNumber(number) {
+        if (this.resultDisplay.includes('.') && number === '.') return;
+        
         this.resultDisplay = `${this.resultDisplay}${number.toString()}`;
     }
 
