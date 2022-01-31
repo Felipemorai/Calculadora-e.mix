@@ -13,10 +13,22 @@ class Calculator {
         this.clear();
     }
 
+    calculate() {
+        let result;
+
+        const previousDisplayFloat = parseFloat(this.previousDisplay);
+        const resultDisplayFloat = parseFloat(this.resultDisplay);
+
+    }
+
     chooseOperation(operaters) {
+        if (this.previousDisplay != '') {
+            this.calculate()
+        }
+
         this.operaters = operaters;
 
-        this.previousDisplay = `${this.resultDisplay} ${this.operaters}`;
+        this.previousDisplay = this.resultDisplay;
         this.resultDisplay = '';
     }
 
@@ -33,7 +45,7 @@ class Calculator {
     }
 
     updateDisplay() {
-        this.previousDisplayText.innerText = this.previousDisplay;
+        this.previousDisplayText.innerText = `${this.previousDisplay} ${this.operaters}`;
         this.resultDisplayText.innerText = this.resultDisplay;
     }
 }
