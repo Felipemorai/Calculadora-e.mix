@@ -19,6 +19,24 @@ class Calculator {
         const previousDisplayFloat = parseFloat(this.previousDisplay);
         const resultDisplayFloat = parseFloat(this.resultDisplay);
 
+        if (isNaN(previousDisplayFloat) || isNaN(resultDisplayFloat)) return;
+
+        switch (this.operaters) {
+            case '+':
+                result = previousDisplayFloat + resultDisplayFloat;
+                break;
+            case '-':
+                result = previousDisplayFloat - resultDisplayFloat;
+                break;
+            case '÷':
+                result = previousDisplayFloat / resultDisplayFloat;
+                break;
+            case 'x':
+                result = previousDisplayFloat * resultDisplayFloat;
+                break;
+            default:
+              return;
+        }
     }
 
     chooseOperation(operaters) {
@@ -45,7 +63,7 @@ class Calculator {
     }
 
     updateDisplay() {
-        this.previousDisplayText.innerText = `${this.previousDisplay} ${this.operaters}`;
+        this.previousDisplayText.innerText = `${this.previousDisplay} ${this.operaters || ""}`;
         this.resultDisplayText.innerText = this.resultDisplay;
     }
 }
