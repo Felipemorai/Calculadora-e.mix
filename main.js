@@ -34,9 +34,16 @@ class Calculator {
             case 'x':
                 result = previousDisplayFloat * resultDisplayFloat;
                 break;
+            case '√':
+                result = (Math.sqrt(previousDisplayFloat));
+                break;
             default:
               return;
         }
+
+        this.resultDisplay = result;
+        this.operaters = undefined;
+        this.previousDisplay = '';
     }
 
     chooseOperation(operaters) {
@@ -59,7 +66,7 @@ class Calculator {
     clear() {
         this.previousDisplay = '';
         this.resultDisplay = '';
-        this.operation = undefined;
+        this.operaters = undefined;
     }
 
     updateDisplay() {
