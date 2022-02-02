@@ -41,6 +41,9 @@ class Calculator {
             case '√':
                 result = (Math.sqrt(previousDisplayFloat));
                 break;
+            case '+/-':
+                result = (Math.sign(previousDisplayFloat));
+                break;
             default:
               return;
         }
