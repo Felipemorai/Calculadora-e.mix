@@ -13,6 +13,10 @@ class Calculator {
         this.clear();
     }
 
+    delete() {
+        this.resultDisplay = this.resultDisplay.toString().slice(0, -1);
+    }
+
     calculate() {
         let result;
 
@@ -31,7 +35,7 @@ class Calculator {
             case '÷':
                 result = previousDisplayFloat / resultDisplayFloat;
                 break;
-            case 'x':
+            case '×':
                 result = previousDisplayFloat * resultDisplayFloat;
                 break;
             case '√':
@@ -103,3 +107,8 @@ equalsButton.addEventListener('click', () => {
     calculator.calculate();
     calculator.updateDisplay();
 });
+
+deleteLast.addEventListener('click', () => {
+    calculator.delete();
+    calculator.updateDisplay();
+})
